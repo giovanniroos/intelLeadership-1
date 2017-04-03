@@ -1,0 +1,157 @@
+<carousel>
+  <slide>
+    <img src="app/assets/images/maxresdefault.jpg" alt="First slide">
+    <div class="carousel-caption">
+      <h3>First slide label</h3>
+      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+    </div>
+  </slide>
+  <slide>
+    <img src="app/assets/images/gore.png" alt="Second slide">
+    <div class="carousel-caption">
+      <h3>Second slide label</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+  </slide>
+  <slide>
+    <img src="app/assets/images/quote.png" alt="Third slide">
+    <div class="carousel-caption">
+      <h3>Third slide label</h3>
+      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+    </div>
+  </slide>
+  <slide>
+    <img src="app/assets/images/block.png" alt="Third slide">
+    <div class="carousel-caption">
+      <h3>Third slide label</h3>
+      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+    </div>
+  </slide>
+</carousel>
+
+<div class="container">
+    <img src="app/assets/images/discoveryHome.png" alt="home logo" style="float: right;" width="30%" height="30%">
+    <h1>Intellectual Leadership</h1>
+    <p>
+        Welcome, to your intellectual leadership portal.
+    </p>
+    <a (click)="lgModal.show()">Check who has completed what...</a>
+    <hr/>
+
+    <p>What is intellectual leadership?</p>
+    <ul>
+        <li>Something</li>
+        <li>Something</li>
+        <li>Something</li>
+    </ul>
+
+    <div>
+
+  <tabset #staticTabs>
+    <tab heading="Week 1">
+        <h1>EASTER EGG HUNT.....</h1>
+
+    </tab>
+
+    <tab heading="Week 2">
+        <h1>Hold on!</h1>
+            <div class="alert alert-danger" role="alert">
+                ¯\_(ツ)_/¯ Challenge will be revealed soon!!!!!!!!!
+            </div>
+    </tab>
+
+    <tab heading="Week 3">
+        <h1>Hold on!</h1>
+            <div class="alert alert-danger" role="alert">
+                ¯\_(ツ)_/¯ Challenge will be revealed soon!!!!!!!!!
+            </div>
+    </tab>
+
+    <tab heading="Week 4">
+            <h1>Hold on!</h1>
+            <div class="alert alert-danger" role="alert">
+                ¯\_(ツ)_/¯ Challenge will be revealed soon!!!!!!!!!
+            </div>
+    </tab>
+  </tabset>
+</div>
+
+<hr/>
+
+<!--<div class='table-responsive'>
+                <table class='table' *ngIf='users && users.length'>
+                    <thead>
+                        <tr>
+                            <th>User Name</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let user of users ">
+                            <td>
+                                <a>
+                                    {{user.userName}}
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+    <hr />
+</div>-->
+
+
+
+<div class="jumbotron">
+    <div class="container ">
+        <div class="panel-body ">
+            <div class="container ">
+                <div class="row ">
+                    <div class="col-md-4 ">
+                        <h3>Who we are</h3>
+                        <div class="list-group">
+                            <div class="list-group">
+                                <a class="list-group-item">Christelle Lingham</a>
+                                <a class="list-group-item">Mohammed Beg</a>
+                                <a class="list-group-item">Lloyd Dugmore</a>
+                                <a class="list-group-item">Prinsloo Khubeka</a>
+                                <a class="list-group-item">Moses Komane</a>
+                                <a class="list-group-item">Shumile Chabalala</a>
+                                <a class="list-group-item">Robert Mulati</a>
+                                <a class="list-group-item">Ntsako Nevhutalu</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 ">
+                        Some footer
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<div bsModal #lgModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title pull-left">Who has completed what?</h4>
+                <button type="button" class="close pull-right" (click)="lgModal.hide()" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div style="padding:10%">
+                <ol>
+                    <li>We care what you think</li>
+                    <li>We want the best for you</li>
+                    <li>We love it when you love us</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
