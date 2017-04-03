@@ -12,6 +12,7 @@ import { TabsModule } from 'ng2-bootstrap';
 
 import { AppComponent } from './app.component';
 import { WelcomeComponent } from './components/welcome/welcome.component';
+import { UserComponent } from './components/user/user.component';
 
 @NgModule({
   imports:      [ BrowserModule, 
@@ -30,7 +31,8 @@ import { WelcomeComponent } from './components/welcome/welcome.component';
                   TabsModule.forRoot()],
   declarations: [ AppComponent,
                   WelcomeComponent,
-                  PdfViewerComponent],
+                  PdfViewerComponent,
+                  UserComponent],
   providers:    [ appRoutingProviders],
   bootstrap:    [ AppComponent ]
 })

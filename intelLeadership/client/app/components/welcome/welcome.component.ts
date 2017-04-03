@@ -1,9 +1,9 @@
 import {Component, ViewChild } from '@angular/core';
-import {AlertComponent} from 'ng2-bootstrap/ng2-bootstrap';
 import {Router} from '@angular/router';
+import {ModalDirective} from 'ng2-bootstrap'
 
 import {UserService} from '../../services/users/user.service';
-import { TabsetComponent } from 'ng2-bootstrap';
+import {TabsetComponent} from 'ng2-bootstrap';
 
 @Component({
   selector: 'welcomePage',
@@ -14,25 +14,25 @@ import { TabsetComponent } from 'ng2-bootstrap';
 export class WelcomeComponent {
   users: Array<any>;
   @ViewChild('staticTabs') staticTabs: TabsetComponent;
+  @ViewChild('lgModal') public lgModal:ModalDirective;
 
   constructor(private _userService: UserService,
      private _routing: Router) {
-    _userService.getUserList().subscribe(response => {
-      this.users = response;
-    });
+    
   }
 
-  public alertMe(): void {
-    setTimeout(function (): void {
-      alert('You\'ve selected the alert tab!');
+  openUserModal(){
+    this._userService.getUserList().subscribe(response => {
+      this.users = response;
     });
+    this.lgModal.show();
   }
- 
-  selectTab(tab_id: number) {
-      this.staticTabs.tabs[tab_id].active = true;
+
+  redirectToSurvey(){
+
   }
- 
-  disableEnable() {
-    this.staticTabs.tabs[2].disabled = ! this.staticTabs.tabs[2].disabled
-  }  
+
+  redirectToEscalationsForm(){
+    
+  }
 }

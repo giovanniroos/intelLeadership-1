@@ -1,7 +1,6 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var router_1 = require("@angular/router");
-var welcome_component_1 = require("./components/welcome/welcome.component");
+var router_1 = require('@angular/router');
+var welcome_component_1 = require('./components/welcome/welcome.component');
 var appRoutes = [
     { path: '', component: welcome_component_1.WelcomeComponent },
 ];

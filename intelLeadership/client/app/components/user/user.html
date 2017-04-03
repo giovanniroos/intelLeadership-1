@@ -1,0 +1,15 @@
+<div class="form-style-3">
+    <form [formGroup]="userForm" autocomplete="off" novalidate style="width:50%; margin:auto;">
+        <fieldset>
+            <span>User <span class="required">*</span></span>
+            <md-select formControlName="userSelected">
+                <md-option *ngFor="let user of users" [value]="user">
+                    {{ user.userName }}
+                </md-option>
+            </md-select>
+            <div class="error" *ngIf="userForm.get('userSelected').hasError('required') && userForm.get('userSelected').touched">
+                <strong>* Please select a user</strong>
+            </div>
+        </fieldset>
+    </form>
+</div>

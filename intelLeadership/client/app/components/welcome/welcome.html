@@ -1,32 +1,46 @@
 <carousel>
-  <slide>
-    <img src="app/assets/images/maxresdefault.jpg" alt="First slide">
-    <div class="carousel-caption">
-      <h3>First slide label</h3>
-      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-    </div>
-  </slide>
-  <slide>
-    <img src="app/assets/images/gore.png" alt="Second slide">
-    <div class="carousel-caption">
-      <h3>Second slide label</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    </div>
-  </slide>
-  <slide>
-    <img src="app/assets/images/quote.png" alt="Third slide">
-    <div class="carousel-caption">
-      <h3>Third slide label</h3>
-      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-    </div>
-  </slide>
-  <slide>
-    <img src="app/assets/images/block.png" alt="Third slide">
-    <div class="carousel-caption">
-      <h3>Third slide label</h3>
-      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-    </div>
-  </slide>
+    <slide>
+        <img src="app/assets/images/333.jpg" alt="First slide" width="1350px" height="400px">
+        <div class="carousel-caption">
+            <h3>Adrian Gore</h3>
+            <p>It is when I am building something of scale which positively impacts society that I feel the greatest sense of achievement.</p>
+        </div>
+    </slide>
+    <slide>
+        <img src="app/assets/images/stevejobs.jpg" alt="Second slide" width="1350px" height="400px">
+        <div class="carousel-caption">
+            <h3>Steve Jobs</h3>
+            <p>Have the courage to follow your heart and intuition. They somehow know what you truly want to become.</p>
+        </div>
+    </slide>
+    <slide>
+        <img src="app/assets/images/elonmusk.jpg" alt="Third slide" width="1350px" height="400px">
+        <div class="carousel-caption">
+            <h3>Elon Musk</h3>
+            <p>If something is important enough you should try, even if the probable outcome is failure.</p>
+        </div>
+    </slide>
+    <slide>
+        <img src="app/assets/images/mz.jpg" alt="Fourth slide" width="1350px" height="400px">
+        <div class="carousel-caption">
+            <h3>Mark Zuckerberg</h3>
+            <p>If you just work on stuff that you like and are passionate about, you dont have to have a master plan with how things will play out.</p>
+        </div>
+    </slide>
+    <slide>
+        <img src="app/assets/images/bill.jpg" alt="Fifth slide" width="1350px" height="400px">
+        <div class="carousel-caption">
+            <h3>Bill gates</h3>
+            <p>I choose a lazy person to do a hard job. Because a lazy person will find an easy way to do it.</p>
+        </div>
+    </slide>
+    <slide>
+        <img src="app/assets/images/branson.jpg" alt="Sixth slide" width="1350px" height="400px">
+        <div class="carousel-caption">
+            <h3>Richard Branson</h3>
+            <p>Train people well enough so they can leave. Treat them well enough so they dont want to.</p>
+        </div>
+    </slide>
 </carousel>
 
 <div class="container">
@@ -35,122 +49,150 @@
     <p>
         Welcome, to your intellectual leadership portal.
     </p>
-    <a (click)="lgModal.show()">Check who has completed what...</a>
+    <a (click)="openUserModal()" style="float: right;">Check who has completed what...</a>
     <hr/>
 
-    <p>What is intellectual leadership?</p>
-    <ul>
-        <li>Something</li>
-        <li>Something</li>
-        <li>Something</li>
-    </ul>
+    <h4>What is intellectual leadership?</h4>
+    <i>An insatiable curiosity and thirst for knowledge underpinned by an ability to seek common understanding in an uncommon way, is the foundation of intellectual leadership. We believe in defining a vision and implementing a business strategy that
+            ensures we consistently deliver progress and remain ahead of our competitors. We achieve this by striving every day, to gain insight and knowledge on all topics and areas of the business and our external environment, so that we can contribute,
+            with confidence and understanding, to the success of Discovery.
+    </i>
+
+    <p></p>
+    <br/>
 
     <div>
+        <tabset #staticTabs>
+            <tab heading="Week 1">
+                <h1>EASTER EGG HUNT.....</h1>
+                <div class="container" style="float: left">
+                    <userBlock></userBlock>
+                </div>
+            </tab>
 
-  <tabset #staticTabs>
-    <tab heading="Week 1">
-        <h1>EASTER EGG HUNT.....</h1>
+            <tab heading="Week 2">
+                <h1>Hold on!</h1>
+                <div class="alert alert-danger" role="alert">
+                    ¯\_(ツ)_/¯ Challenge will be revealed soon!!!!!!!!!
+                </div>
+            </tab>
 
-    </tab>
+            <tab heading="Week 3">
+                <h1>Hold on!</h1>
+                <div class="alert alert-danger" role="alert">
+                    ¯\_(ツ)_/¯ Challenge will be revealed soon!!!!!!!!!
+                </div>
+            </tab>
 
-    <tab heading="Week 2">
-        <h1>Hold on!</h1>
-            <div class="alert alert-danger" role="alert">
-                ¯\_(ツ)_/¯ Challenge will be revealed soon!!!!!!!!!
-            </div>
-    </tab>
+            <tab heading="Week 4">
+                <h1>Hold on!</h1>
+                <div class="alert alert-danger" role="alert">
+                    ¯\_(ツ)_/¯ Challenge will be revealed soon!!!!!!!!!
+                </div>
+            </tab>
+        </tabset>
+    </div>
 
-    <tab heading="Week 3">
-        <h1>Hold on!</h1>
-            <div class="alert alert-danger" role="alert">
-                ¯\_(ツ)_/¯ Challenge will be revealed soon!!!!!!!!!
-            </div>
-    </tab>
+    <hr/>
 
-    <tab heading="Week 4">
-            <h1>Hold on!</h1>
-            <div class="alert alert-danger" role="alert">
-                ¯\_(ツ)_/¯ Challenge will be revealed soon!!!!!!!!!
-            </div>
-    </tab>
-  </tabset>
-</div>
-
-<hr/>
-
-<!--<div class='table-responsive'>
-                <table class='table' *ngIf='users && users.length'>
-                    <thead>
-                        <tr>
-                            <th>User Name</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr *ngFor="let user of users ">
-                            <td>
-                                <a>
-                                    {{user.userName}}
-                                </a>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-    <hr />
-</div>-->
-
-
-
-<div class="jumbotron">
-    <div class="container ">
-        <div class="panel-body ">
-            <div class="container ">
-                <div class="row ">
-                    <div class="col-md-4 ">
-                        <h3>Who we are</h3>
-                        <div class="list-group">
+    <br/><br/><br/>
+    <div class="jumbotron">
+        <div class="container ">
+            <div class="panel-body ">
+                <div class="container ">
+                    <div class="row ">
+                        <div class="col-md-4 ">
+                            <h3>Our Team</h3>
                             <div class="list-group">
-                                <a class="list-group-item">Christelle Lingham</a>
-                                <a class="list-group-item">Mohammed Beg</a>
-                                <a class="list-group-item">Lloyd Dugmore</a>
-                                <a class="list-group-item">Prinsloo Khubeka</a>
-                                <a class="list-group-item">Moses Komane</a>
-                                <a class="list-group-item">Shumile Chabalala</a>
-                                <a class="list-group-item">Robert Mulati</a>
-                                <a class="list-group-item">Ntsako Nevhutalu</a>
+                                <div class="list-group">
+                                    <a class="list-group-item">Christelle Lingham</a>
+                                    <a class="list-group-item">Mohammed Beg</a>
+                                    <a class="list-group-item">Lloyd Dugmore</a>
+                                    <a class="list-group-item">Prinsloo Khubeka</a>
+                                    <a class="list-group-item">Moses Komane</a>
+                                    <a class="list-group-item">Shumile Chabalala</a>
+                                    <a class="list-group-item">Robert Mulati</a>
+                                    <a class="list-group-item">Ntsako Nevhutalu</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-4 ">
-                        Some footer
+                        <div class="col-md-4 ">
+                            <h3>Contact us</h3>
+                            <div class="list-group">
+                                <a class="list-group-item list-group-item-success">
+                                    <h4 class="list-group-item-heading">General enquiries</h4>
+                                    <p class="list-group-item-text"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Email us on <a href="mailto:christellel@discovery.co.za">christellel@discovery.co.za</a></p>
+                                </a>
+                                <a class="list-group-item list-group-item-info" (click)="redirectToSurvey()">
+                                    <h4 class="list-group-item-heading">Do a quick survey</h4>
+                                    <p class="list-group-item-text"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Quick survey</p>
+                                </a>
+                                <a class="list-group-item list-group-item-danger" (click)="redirectToEscalationsForm()">
+                                    <h4 class="list-group-item-heading">Escalations</h4>
+                                    <p class="list-group-item-text"><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> Click here for escalations</p>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
 
 
 
 
 
-<div bsModal #lgModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title pull-left">Who has completed what?</h4>
-                <button type="button" class="close pull-right" (click)="lgModal.hide()" aria-label="Close">
+    <div bsModal #lgModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title pull-left">Who has completed what?</h4>
+                    <button type="button" class="close pull-right" (click)="lgModal.hide()" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
-            </div>
+                </div>
 
-            <div style="padding:10%">
-                <ol>
-                    <li>We care what you think</li>
-                    <li>We want the best for you</li>
-                    <li>We love it when you love us</li>
-                </ol>
+                <div style="padding:10%">
+                    <div class='table-responsive'>
+                        <table class='table' *ngIf='users && users.length'>
+                            <thead>
+                                <tr>
+                                    <th>User Name</th>
+                                    <th>Week 1</th>
+                                    <th>Week 2</th>
+                                    <th>Week 3</th>
+                                    <th>Week 4</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let user of users ">
+                                    <td>
+                                        <a>{{user.userName}}</a>
+                                    </td>
+                                    <td>
+                                        <span class="glyphicon glyphicon-thumbs-up"></span>
+                                        <span class="glyphicon glyphicon-thumbs-down"></span>
+                                    </td>
+                                    <td>
+                                        <span class="glyphicon glyphicon-thumbs-up"></span>
+                                        <span class="glyphicon glyphicon-thumbs-down"></span>
+                                    </td>
+                                    <td>
+                                        <span class="glyphicon glyphicon-thumbs-up"></span>
+                                        <span class="glyphicon glyphicon-thumbs-down"></span>
+                                    </td>
+                                    <td>
+                                        <span class="glyphicon glyphicon-thumbs-up"></span>
+                                        <span class="glyphicon glyphicon-thumbs-down"></span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <hr />
+                </div>
             </div>
         </div>
     </div>
