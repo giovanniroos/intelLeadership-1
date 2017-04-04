@@ -54,8 +54,8 @@
 
     <h4>What is intellectual leadership?</h4>
     <i>An insatiable curiosity and thirst for knowledge underpinned by an ability to seek common understanding in an uncommon way, is the foundation of intellectual leadership. We believe in defining a vision and implementing a business strategy that
-            ensures we consistently deliver progress and remain ahead of our competitors. We achieve this by striving every day, to gain insight and knowledge on all topics and areas of the business and our external environment, so that we can contribute,
-            with confidence and understanding, to the success of Discovery.
+    ensures we consistently deliver progress and remain ahead of our competitors. We achieve this by striving every day, to gain insight and knowledge on all topics and areas of the business and our external environment, so that we can contribute,
+    with confidence and understanding, to the success of Discovery.
     </i>
 
     <p></p>
@@ -64,10 +64,7 @@
     <div>
         <tabset #staticTabs>
             <tab heading="Week 1">
-                <h1>EASTER EGG HUNT.....</h1>
-                <div class="container" style="float: left">
-                    <userBlock></userBlock>
-                </div>
+                <eggHuntBlock></eggHuntBlock>
             </tab>
 
             <tab heading="Week 2">
@@ -93,43 +90,77 @@
         </tabset>
     </div>
 
+</div>
     <hr/>
 
-    <br/><br/><br/>
+    <br/><br/>
+    <br/><br/>
+    <br/><br/>
     <div class="jumbotron">
         <div class="container ">
             <div class="panel-body ">
                 <div class="container ">
                     <div class="row ">
-                        <div class="col-md-4 ">
+                        <div class="col-md-6 ">
                             <h3>Our Team</h3>
                             <div class="list-group">
                                 <div class="list-group">
-                                    <a class="list-group-item">Christelle Lingham</a>
-                                    <a class="list-group-item">Mohammed Beg</a>
-                                    <a class="list-group-item">Lloyd Dugmore</a>
-                                    <a class="list-group-item">Prinsloo Khubeka</a>
-                                    <a class="list-group-item">Moses Komane</a>
-                                    <a class="list-group-item">Shumile Chabalala</a>
-                                    <a class="list-group-item">Robert Mulati</a>
-                                    <a class="list-group-item">Ntsako Nevhutalu</a>
+                                    <a class="list-group-item">Christelle Lingham
+                                        <br/>
+                                        <span><i>An insatiable curiosity and thirst for knowledge underpinned by an ability to seek common understanding in an uncommon way, is the foundation of intellectual leadership</i></span>
+                                    </a>
+                                    <a class="list-group-item">Mohammed Beg
+                                        <br/>
+                                        <span><i></i></span>
+                                    </a>
+                                    <a class="list-group-item">Lloyd Dugmore
+                                        <br/>
+                                        <span><i>"Live as if you were to die tomorrow. Learn as if you where to live forever." - Mahatma Ghandi" </i></span>
+                                    </a>
+                                    <a class="list-group-item">Prinsloo Kubheka
+                                        <br/>
+                                        <span><i></i></span>
+                                    </a>
+                                    <a class="list-group-item">Moses Komane
+                                        <br/>
+                                        <span><i></i></span>
+                                    </a>
+                                    <a class="list-group-item">Shumile Chabalala
+                                        <br/>
+                                        <span><i>An intellectual leader is the one who is strong, but not rude;
+                                                Kind, but not weak; Bold, but not bully; Thoughtful, but not lazy;
+                                                Humble, but not timid; Proud, but not arrogant and has humor but without folly.
+                                        </i></span>
+                                    </a>
+                                    <a class="list-group-item">Robert Mulati
+                                        <br/>
+                                        <span><i>An intellectual leader attempts to transform society by creating a clear vision of the future.</i></span>
+                                        <br/>
+                                        <span><i>He/she possesses cognitive competencies encompassing intelligence in form of critical analysis, strategic perspective, vision and imagination</i></span>
+                                    </a>
+                                    <a class="list-group-item">Ntsako Nevhutalu
+                                        <br/>
+                                        <span><i>Intellectual leaders Create a clear vision</i></span>
+                                        <br/>
+                                        <span><i>Intellectual Leadership is Leadership that involves enabling others to contribute intellectual ideas</i></span>
+                                    </a>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 ">
+                        <div class="col-md-6 ">
                             <h3>Contact us</h3>
                             <div class="list-group">
                                 <a class="list-group-item list-group-item-success">
                                     <h4 class="list-group-item-heading">General enquiries</h4>
-                                    <p class="list-group-item-text"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Email us on <a href="mailto:christellel@discovery.co.za">christellel@discovery.co.za</a></p>
+                                    <p class="list-group-item-text"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Email our team leader on <a href="mailto:christellel@discovery.co.za">christellel@discovery.co.za</a></p>
                                 </a>
                                 <a class="list-group-item list-group-item-info" (click)="redirectToSurvey()">
                                     <h4 class="list-group-item-heading">Do a quick survey</h4>
                                     <p class="list-group-item-text"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Quick survey</p>
                                 </a>
                                 <a class="list-group-item list-group-item-danger" (click)="redirectToEscalationsForm()">
-                                    <h4 class="list-group-item-heading">Escalations</h4>
-                                    <p class="list-group-item-text"><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> Click here for escalations</p>
+                                    <h4 class="list-group-item-heading">Feedback</h4>
+                                    <p class="list-group-item-text"><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> Click here tp provide feedback</p>
                                 </a>
                             </div>
                         </div>
@@ -137,7 +168,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    
 
 
 
@@ -172,20 +203,21 @@
                                         <a>{{user.userName}}</a>
                                     </td>
                                     <td>
-                                        <span class="glyphicon glyphicon-thumbs-up"></span>
-                                        <span class="glyphicon glyphicon-thumbs-down"></span>
+                                        <div *ngIf="user.barCode">
+                                        <button class="btn btn-success"><span class="glyphicon glyphicon-thumbs-up"></span> </button>
+                                        </div>
+                                        <div *ngIf="!user.barCode">
+                                        <button class="btn btn-danger"><span class="glyphicon glyphicon-thumbs-down"></span> </button>
+                                        </div>
                                     </td>
                                     <td>
-                                        <span class="glyphicon glyphicon-thumbs-up"></span>
-                                        <span class="glyphicon glyphicon-thumbs-down"></span>
+                                        <button class="btn btn-danger"><span class="glyphicon glyphicon-thumbs-down"></span> </button>
                                     </td>
                                     <td>
-                                        <span class="glyphicon glyphicon-thumbs-up"></span>
-                                        <span class="glyphicon glyphicon-thumbs-down"></span>
+                                        <button class="btn btn-danger"><span class="glyphicon glyphicon-thumbs-down"></span> </button>
                                     </td>
                                     <td>
-                                        <span class="glyphicon glyphicon-thumbs-up"></span>
-                                        <span class="glyphicon glyphicon-thumbs-down"></span>
+                                        <button class="btn btn-danger"><span class="glyphicon glyphicon-thumbs-down"></span> </button>
                                     </td>
                                 </tr>
                             </tbody>

@@ -1,0 +1,51 @@
+            <h1>EASTER EGG HUNT.....</h1>
+                <div class="container" style="float: left">
+                    <h3>Objective</h3>
+                    <p>We have hidden easter eggs all over the area. Your job is....</p>
+                    <ol>
+                        <li>Get on your hands and knees and get looking.</li>
+                        <li>Enter the barcode found on the back of your egg in the fields below.</li>
+                        <li>Press save.</li>
+                    </ol>    
+                    <p>If your enter a correct barcode your name will go into a lucky draw for a prize.</p>
+                    <img src="app/assets/images/bunnyPrize.png" alt="Fifth slide" width="100px" height="100px">
+                    
+                    <div class="form-style-3">
+                        <form [formGroup]="eggForm" autocomplete="off" novalidate style="width:50%; margin:auto;">
+                            <fieldset>
+                                <div *ngIf="!saved"> 
+                                    <label for="barcode">
+                                            <span>Barcode <span class="required">*</span></span>
+                                            <input name="barcode" formControlName="barcode" class="input-field" type="number" placeholder="Enter barcode here"/>
+                                        </label>
+                                    <div class="error" *ngIf="eggForm.get('barcode').hasError('required') && eggForm.get('barcode').touched">
+                                        <strong>* barcode is required</strong>
+                                    </div>
+
+                                    <span>User <span class="required">*</span></span>
+                                    <md-select formControlName="userSelected">
+                                        <md-option *ngFor="let user of users" [value]="user">
+                                            {{ user.userName }}
+                                        </md-option>
+                                    </md-select>
+                                    <div class="error" *ngIf="eggForm.get('userSelected').hasError('required') && eggForm.get('userSelected').touched">
+                                        <strong>* Please select a user</strong>
+                                    </div>
+
+                                    <p class="text-center">
+                                        <button class="btn btn-success" type="submit" (click)="saveData()" [disabled]="!eggForm.valid"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Save</button>
+                                    </p>
+                                </div>
+                                <div *ngIf="saved">
+                                    <div class="alert alert-success" role="alert"><strong>Well done!</strong> You have been entered for the lucky draw. Good luck.</div>
+                                </div>   
+                                <div *ngIf="cantSave">
+                                    <div class="alert alert-danger" role="alert"><strong>Oops!</strong> A barcode has already been entered for that user.</div>
+                                </div>  
+                                <div *ngIf="cheating">
+                                    <div class="alert alert-danger" role="alert"><strong>No No No!</strong> That is not a valid bar code.</div>
+                                </div>    
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>

@@ -33,6 +33,6 @@ export class WelcomeComponent {
   }
 
   redirectToEscalationsForm(){
-    
+    this._routing.navigate(['/feedback']);
   }
 }

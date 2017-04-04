@@ -8,9 +8,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var forms_1 = require('@angular/forms');
-var user_service_1 = require('../../services/users/user.service');
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var forms_1 = require("@angular/forms");
+var user_service_1 = require("../../services/users/user.service");
 var UserComponent = (function () {
     function UserComponent(_userService, fb) {
         this._userService = _userService;
@@ -31,17 +32,17 @@ var UserComponent = (function () {
             _this.users = response;
         });
     };
-    UserComponent = __decorate([
-        core_1.Component({
-            selector: 'userBlock',
-            moduleId: module.id,
-            templateUrl: 'user.html',
-            providers: [user_service_1.UserService],
-            styleUrls: ['../../css/forms.css']
-        }), 
-        __metadata('design:paramtypes', [user_service_1.UserService, forms_1.FormBuilder])
-    ], UserComponent);
     return UserComponent;
 }());
+UserComponent = __decorate([
+    core_1.Component({
+        selector: 'userBlock',
+        moduleId: module.id,
+        templateUrl: 'user.html',
+        providers: [user_service_1.UserService],
+        styleUrls: ['../../css/forms.css']
+    }),
+    __metadata("design:paramtypes", [user_service_1.UserService, forms_1.FormBuilder])
+], UserComponent);
 exports.UserComponent = UserComponent;
 //# sourceMappingURL=user.component.js.map

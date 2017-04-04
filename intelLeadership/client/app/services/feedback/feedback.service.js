@@ -12,29 +12,25 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var http_1 = require("@angular/http");
 require("rxjs/add/operator/map");
-var UserService = (function () {
-    function UserService(http) {
+var FeedbackService = (function () {
+    function FeedbackService(http) {
         this.http = http;
     }
-    UserService.prototype.getUserList = function () {
-        return this.http.get('/api/userList')
+    FeedbackService.prototype.getAllFeedback = function () {
+        return this.http.get('/api/feedbackList')
             .map(function (response) { return response.json(); });
     };
-    UserService.prototype.saveUser = function (user) {
+    FeedbackService.prototype.saveFeedback = function (user) {
         var headers = new http_1.Headers();
         headers.append('Content-Type', 'application/json');
-        return this.http.post("/api/user/save", JSON.stringify(user), { headers: headers })
+        return this.http.post("/api/feedback/save", JSON.stringify(user), { headers: headers })
             .map(function (response) { return response.json(); });
     };
-    UserService.prototype.getOneUser = function (id) {
-        return this.http.get('/api/user/' + id)
-            .map(function (response) { return response.json(); });
-    };
-    return UserService;
+    return FeedbackService;
 }());
-UserService = __decorate([
+FeedbackService = __decorate([
     core_1.Injectable(),
     __metadata("design:paramtypes", [http_1.Http])
-], UserService);
-exports.UserService = UserService;
-//# sourceMappingURL=user.service.js.map
+], FeedbackService);
+exports.FeedbackService = FeedbackService;
+//# sourceMappingURL=feedback.service.js.map

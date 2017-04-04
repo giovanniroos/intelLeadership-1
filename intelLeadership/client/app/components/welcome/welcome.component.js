@@ -8,11 +8,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var router_1 = require('@angular/router');
-var ng2_bootstrap_1 = require('ng2-bootstrap');
-var user_service_1 = require('../../services/users/user.service');
-var ng2_bootstrap_2 = require('ng2-bootstrap');
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var router_1 = require("@angular/router");
+var ng2_bootstrap_1 = require("ng2-bootstrap");
+var user_service_1 = require("../../services/users/user.service");
+var ng2_bootstrap_2 = require("ng2-bootstrap");
 var WelcomeComponent = (function () {
     function WelcomeComponent(_userService, _routing) {
         this._userService = _userService;
@@ -28,25 +29,27 @@ var WelcomeComponent = (function () {
     WelcomeComponent.prototype.redirectToSurvey = function () {
     };
     WelcomeComponent.prototype.redirectToEscalationsForm = function () {
+        this._routing.navigate(['/feedback']);
     };
-    __decorate([
-        core_1.ViewChild('staticTabs'), 
-        __metadata('design:type', ng2_bootstrap_2.TabsetComponent)
-    ], WelcomeComponent.prototype, "staticTabs", void 0);
-    __decorate([
-        core_1.ViewChild('lgModal'), 
-        __metadata('design:type', ng2_bootstrap_1.ModalDirective)
-    ], WelcomeComponent.prototype, "lgModal", void 0);
-    WelcomeComponent = __decorate([
-        core_1.Component({
-            selector: 'welcomePage',
-            moduleId: module.id,
-            templateUrl: 'welcome.html',
-            providers: [user_service_1.UserService]
-        }), 
-        __metadata('design:paramtypes', [user_service_1.UserService, router_1.Router])
-    ], WelcomeComponent);
     return WelcomeComponent;
 }());
+__decorate([
+    core_1.ViewChild('staticTabs'),
+    __metadata("design:type", ng2_bootstrap_2.TabsetComponent)
+], WelcomeComponent.prototype, "staticTabs", void 0);
+__decorate([
+    core_1.ViewChild('lgModal'),
+    __metadata("design:type", ng2_bootstrap_1.ModalDirective)
+], WelcomeComponent.prototype, "lgModal", void 0);
+WelcomeComponent = __decorate([
+    core_1.Component({
+        selector: 'welcomePage',
+        moduleId: module.id,
+        templateUrl: 'welcome.html',
+        providers: [user_service_1.UserService]
+    }),
+    __metadata("design:paramtypes", [user_service_1.UserService,
+        router_1.Router])
+], WelcomeComponent);
 exports.WelcomeComponent = WelcomeComponent;
 //# sourceMappingURL=welcome.component.js.map

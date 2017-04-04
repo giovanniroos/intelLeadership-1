@@ -1,0 +1,63 @@
+
+<br/>
+<a class="btn btn-primary" routerLink="/" routerLinkActive="active">Back</a>
+
+<div class="container">
+    <h3>Feedback</h3>
+    <p>Please capture feedback below.</p>
+</div>
+
+<div class="form-style-2">
+    <form [formGroup]="escalationForm" autocomplete="off" novalidate style="width:50%; margin:auto;" (ngSubmit)="submitFeedback()">
+        <fieldset>
+            <label for="issue">
+                    <span>Issue: <span class="required">*</span></span>
+                    <input name="issue" formControlName="issue" class="input-field" />
+                    <div class="error" *ngIf="escalationForm.get('issue').hasError('required') && escalationForm.get('issue').touched">
+                        <strong>* Issue is required</strong>
+                    </div>
+                </label>
+            <label for="description">
+                    <span>Description: <span class="required">*</span></span>
+                    <input name="description" formControlName="description" class="input-field" />
+                    <div class="error" *ngIf="escalationForm.get('description').hasError('required') && escalationForm.get('description').touched">
+                        <strong>* Description is required</strong>
+                    </div>
+                </label>
+
+            <p class="text-center">
+                <button class="btn btn-primary" type="submit" [disabled]="!escalationForm.valid"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Send feedback</button>
+            </p>
+        </fieldset>
+    </form>
+</div>
+
+<p></p>
+<div class="container" *ngIf='escalationList && escalationList.length'>
+    <h3>Your feedback</h3>
+    <p>Below is a list of all the feedback.</p>
+
+    <div class="panel panel-primary" style="width:80%; margin:auto;">
+        <div class="panel-heading">Feedback</div>
+        <div class="panel-body">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Issue</th>
+                            <th>Description</th>
+                            <th>Reference number</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let escalation of escalationList">
+                            <td>{{escalation.issue}}</td>
+                            <td>{{escalation.description}}</td>
+                            <td>{{escalation._id}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

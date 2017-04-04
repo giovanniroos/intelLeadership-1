@@ -3,27 +3,22 @@ import { Http, Headers } from '@angular/http';
 import 'rxjs/add/operator/map';
 
 @Injectable()
-export class UserService{
+export class FeedbackService{
 
   constructor (private http: Http){
 
   }
 
-   getUserList(){
-     return this.http.get('/api/userList')
+   getAllFeedback(){
+     return this.http.get('/api/feedbackList')
                 .map(response => response.json());
    }
 
-   saveUser(user: any){  
+   saveFeedback(user: any){  
     var headers = new Headers();
      headers.append('Content-Type', 'application/json');
-     return this.http.post("/api/user/save", 
+     return this.http.post("/api/feedback/save", 
         JSON.stringify(user), {headers: headers})
                  .map(response => response.json());
-   }
-
-   getOneUser(id: String){
-    return this.http.get('/api/user/'  + id)
-                .map(response => response.json());
    }
 }

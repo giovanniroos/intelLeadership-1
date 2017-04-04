@@ -13,6 +13,8 @@ import { TabsModule } from 'ng2-bootstrap';
 import { AppComponent } from './app.component';
 import { WelcomeComponent } from './components/welcome/welcome.component';
 import { UserComponent } from './components/user/user.component';
+import { EggHuntComponent } from './components/egghunt/egghunt.component';
+import { FeedbackComponent } from './components/feedback/feedback.component';
 
 @NgModule({
   imports:      [ BrowserModule, 
@@ -32,7 +34,9 @@ import { UserComponent } from './components/user/user.component';
   declarations: [ AppComponent,
                   WelcomeComponent,
                   PdfViewerComponent,
-                  UserComponent],
+                  UserComponent,
+                  EggHuntComponent,
+                  FeedbackComponent],
   providers:    [ appRoutingProviders],
   bootstrap:    [ AppComponent ]
 })
