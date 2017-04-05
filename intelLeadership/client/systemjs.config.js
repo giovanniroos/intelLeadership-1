@@ -35,7 +35,8 @@
             'moment': 'node_modules/moment',
             'ng2-bootstrap': 'node_modules/ng2-bootstrap',
             'ng2-pdf-viewer': 'node_modules/ng2-pdf-viewer',
-            'pdfjs-dist': 'node_modules/pdfjs-dist'
+            'pdfjs-dist': 'node_modules/pdfjs-dist',
+            'ng2-youtube-player': 'node_modules/ng2-youtube-player'
         },
         // packages tells the System loader how to load when no filename and/or no extension
         packages: {
@@ -69,6 +70,10 @@
             },
             'pdfjs-dist': {
                 defaultExtension: 'js'
+            },
+            'ng2-youtube-player': {
+            main: 'ng2-youtube-player.js',
+            defaultExtension: 'js'
             }
         }
     });

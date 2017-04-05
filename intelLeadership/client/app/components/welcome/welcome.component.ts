@@ -29,7 +29,7 @@ export class WelcomeComponent {
   }
 
   redirectToSurvey(){
-
+    this._routing.navigate(['/survey']);
   }
 
   redirectToEscalationsForm(){

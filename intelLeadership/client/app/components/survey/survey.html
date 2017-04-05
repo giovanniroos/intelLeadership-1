@@ -1,0 +1,64 @@
+
+<br> &nbsp;
+<a class="btn btn-primary" routerLink="/" routerLinkActive="active">Back</a>
+
+<div class="container">
+    <h1>Quick survey (Anonymous)</h1>
+    <p>
+        <a (click)="lgModal.show()">Why is this important to us?</a>
+    </p>
+
+    <hr/>
+    <h4>Questions<small><i> Please signify with a range of 1 to 10 (1 - poor and 10 - excellent)</i></small></h4>
+
+    <form [formGroup]="surveyForm" autocomplete="off" novalidate style="width:50%; margin:auto;" (ngSubmit)="saveSurvey()">
+        <fieldset>
+            <div>
+                <p>How would you rate this experience?</p>
+                <md-slider min="1" max="10" step="1" value="1" thumbLabel tickInterval="1" name="experienceRating" formControlName="experienceRating"></md-slider>
+                <br>
+                <p>How good of a job have we done?</p>
+                <md-slider min="1" max="10" step="1" value="1" thumbLabel tickInterval="1" name="goodJobRating" formControlName="goodJobRating"></md-slider>
+                <br>
+                <p>Do you feel we are getting the concept of Intellectual leadership across?</p>
+                <md-slide-toggle name="conceptRating" formControlName="conceptRating">Yes</md-slide-toggle>
+            </div>
+            <hr/>
+            <h4>Comments <small><i> Please place any comments you may have for us below.</i></small></h4>
+            <div>
+               <textarea mdInput placeholder="Comments" style="width: 80%;" rows="4" name="comments" formControlName="comments"></textarea>
+            </div>
+            <p class="text-center">
+                <button class="btn btn-primary" type="submit"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Submit survey</button>
+            </p>
+        </fieldset>
+    </form>
+</div>
+
+<div *ngIf="saved">
+    <div class="alert alert-success" role="alert"><strong>Thanks!</strong> You have completed the survey.</div>
+</div>
+
+
+
+
+<div bsModal #lgModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title pull-left">Why is this important to us?</h4>
+                <button type="button" class="close pull-right" (click)="lgModal.hide()" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div style="padding:10%">
+                <ol>
+                    <li>We care what you think</li>
+                    <li>We want the best for you</li>
+                    <li>We love it when you love us</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>

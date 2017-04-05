@@ -25,6 +25,7 @@ var EggHuntComponent = (function () {
         this.saved = false;
         this.cantSave = false;
         this.cheating = false;
+        this.jasonLoggedIn = false;
         this.populateForm();
     }
     EggHuntComponent.prototype.ngOnInit = function () {
@@ -44,6 +45,7 @@ var EggHuntComponent = (function () {
         if (this.eggForm.valid) {
             var validBarCode = false;
             this.userObject = this.eggForm.value;
+            console.log(this.userObject.userSelected.userName);
             for (var _i = 0, _a = this.possibleBarCodes; _i < _a.length; _i++) {
                 var c = _a[_i];
                 if (c == this.userObject.barcode) {
@@ -56,17 +58,27 @@ var EggHuntComponent = (function () {
                 this._userService.getOneUser(this.userObject.userSelected._id)
                     .subscribe(function (existingUser) {
                     if (existingUser.barCode == null) {
-                        _this._userService.saveUser(_this.userObject)
-                            .subscribe(function (data) {
-                            _this.saved = true;
+                        if (_this.userObject.userSelected.userName == "Jason") {
+                            _this.jasonLoggedIn = true;
+                            _this.saved = false;
                             _this.cantSave = false;
                             _this.cheating = false;
-                        });
+                        }
+                        else {
+                            _this._userService.saveUser(_this.userObject)
+                                .subscribe(function (data) {
+                                _this.saved = true;
+                                _this.cantSave = false;
+                                _this.cheating = false;
+                                _this.jasonLoggedIn = false;
+                            });
+                        }
                     }
                     else {
                         _this.cantSave = true;
                         _this.saved = false;
                         _this.cheating = false;
+                        _this.jasonLoggedIn = false;
                     }
                 });
             }
@@ -74,6 +86,7 @@ var EggHuntComponent = (function () {
                 this.cheating = true;
                 this.saved = false;
                 this.cantSave = false;
+                this.jasonLoggedIn = false;
             }
         }
     };

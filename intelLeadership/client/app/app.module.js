@@ -16,11 +16,14 @@ var angular2_highcharts_1 = require("angular2-highcharts");
 var ng2_bootstrap_1 = require("ng2-bootstrap");
 var ng2_pdf_viewer_1 = require("ng2-pdf-viewer");
 var ng2_bootstrap_2 = require("ng2-bootstrap");
+var ng2_youtube_player_1 = require("ng2-youtube-player");
 var app_component_1 = require("./app.component");
 var welcome_component_1 = require("./components/welcome/welcome.component");
 var user_component_1 = require("./components/user/user.component");
 var egghunt_component_1 = require("./components/egghunt/egghunt.component");
 var feedback_component_1 = require("./components/feedback/feedback.component");
+var survey_component_1 = require("./components/survey/survey.component");
+var video_component_1 = require("./components/video/video.component");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -41,13 +44,16 @@ AppModule = __decorate([
             ng2_bootstrap_1.RatingModule.forRoot(),
             ng2_bootstrap_1.ModalModule.forRoot(),
             ng2_bootstrap_1.CarouselModule.forRoot(),
-            ng2_bootstrap_2.TabsModule.forRoot()],
+            ng2_bootstrap_2.TabsModule.forRoot(),
+            ng2_youtube_player_1.YoutubePlayerModule],
         declarations: [app_component_1.AppComponent,
             welcome_component_1.WelcomeComponent,
             ng2_pdf_viewer_1.PdfViewerComponent,
             user_component_1.UserComponent,
             egghunt_component_1.EggHuntComponent,
-            feedback_component_1.FeedbackComponent],
+            feedback_component_1.FeedbackComponent,
+            survey_component_1.SurveyComponent,
+            video_component_1.VideoComponent],
         providers: [app_routing_1.appRoutingProviders],
         bootstrap: [app_component_1.AppComponent]
     })

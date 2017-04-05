@@ -9,12 +9,15 @@ import { ChartModule } from 'angular2-highcharts';
 import { AlertModule, CollapseModule, AccordionModule, RatingModule, ModalModule, CarouselModule } from 'ng2-bootstrap';
 import { PdfViewerComponent } from 'ng2-pdf-viewer';
 import { TabsModule } from 'ng2-bootstrap';
+import { YoutubePlayerModule } from 'ng2-youtube-player';
 
 import { AppComponent } from './app.component';
 import { WelcomeComponent } from './components/welcome/welcome.component';
 import { UserComponent } from './components/user/user.component';
 import { EggHuntComponent } from './components/egghunt/egghunt.component';
 import { FeedbackComponent } from './components/feedback/feedback.component';
+import { SurveyComponent } from './components/survey/survey.component';
+import { VideoComponent } from './components/video/video.component';
 
 @NgModule({
   imports:      [ BrowserModule, 
@@ -30,13 +33,16 @@ import { FeedbackComponent } from './components/feedback/feedback.component';
                   RatingModule.forRoot(),
                   ModalModule.forRoot(),
                   CarouselModule.forRoot(),
-                  TabsModule.forRoot()],
+                  TabsModule.forRoot(),
+                  YoutubePlayerModule ],
   declarations: [ AppComponent,
                   WelcomeComponent,
                   PdfViewerComponent,
                   UserComponent,
                   EggHuntComponent,
-                  FeedbackComponent],
+                  FeedbackComponent,
+                  SurveyComponent,
+                  VideoComponent],
   providers:    [ appRoutingProviders],
   bootstrap:    [ AppComponent ]
 })

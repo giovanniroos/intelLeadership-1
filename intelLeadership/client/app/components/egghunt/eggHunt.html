@@ -1,7 +1,7 @@
-            <h1>EASTER EGG HUNT.....</h1>
+            <h1>EASTER EGG HUNT..... (11th April 2017)</h1>
                 <div class="container" style="float: left">
                     <h3>Objective</h3>
-                    <p>We have hidden easter eggs all over the area. Your job is....</p>
+                    <p>On the <strong>11th April</strong> we will hide easter eggs all over the area. Your job is....</p>
                     <ol>
                         <li>Get on your hands and knees and get looking.</li>
                         <li>Enter the barcode found on the back of your egg in the fields below.</li>
@@ -44,6 +44,9 @@
                                 </div>  
                                 <div *ngIf="cheating">
                                     <div class="alert alert-danger" role="alert"><strong>No No No!</strong> That is not a valid bar code.</div>
+                                </div>    
+                                <div *ngIf="jasonLoggedIn">
+                                    <div class="alert alert-danger" role="alert"><strong>Sorry for you!</strong> You are not allowed to participate.</div>
                                 </div>    
                             </fieldset>
                         </form>

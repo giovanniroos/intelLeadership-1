@@ -27,6 +27,7 @@ var WelcomeComponent = (function () {
         this.lgModal.show();
     };
     WelcomeComponent.prototype.redirectToSurvey = function () {
+        this._routing.navigate(['/survey']);
     };
     WelcomeComponent.prototype.redirectToEscalationsForm = function () {
         this._routing.navigate(['/feedback']);
