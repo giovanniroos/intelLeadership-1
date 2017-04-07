@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var UserModel = require('../models/userModel.js');
 var FeedbackModel = require('../models/feedbackModel.js');
-
+var SurveykModel = require('../models/surveyModel.js');
 
 //USERS
 //Get list of users
@@ -43,7 +43,6 @@ router.post('/user/save', function(request, response) {
             }
         });
     });
-   
 })
 
 
@@ -71,4 +70,17 @@ router.post('/feedback/save', function(request, response) {
     });
 })
 
+
+//SURVEY
+//Save survey
+router.post('/survey/save', function(request, response) {
+    var model = new SurveykModel(request.body);
+    model.save(function(err, resource) {
+        if (err) {
+            response.send(err).status(501);
+        } else {
+            response.json(resource).status(201);
+        }
+    });
+})
 module.exports = router;

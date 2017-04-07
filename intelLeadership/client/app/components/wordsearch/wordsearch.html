@@ -1,0 +1,108 @@
+<h1>Wordsearch week <span class="glyphicon glyphicon-search"></span></h1>
+    There are 10 words in the below wordsearch. Do your best to find them all.
+<br/>
+<br/><br/>
+
+<div class="container ">
+   <div class="row ">
+        <div class="col-md-6 ">
+            <img src="app/assets/images/wordsearch.png" alt="search" width="100%" height="100%"/>
+        </div>
+
+        <div class="col-md-6 ">
+            <h4>Words that you have found</h4>
+            <div class="form-style-3">
+                <form [formGroup]="wordForm" autocomplete="off" novalidate style="width:50%; margin:auto;">
+                    <fieldset>
+                         <label for="word1">
+                             <input name="word1" formControlName="word1" class="input-field" placeholder="Enter word here"/>
+                         </label>
+                         <div class="error" *ngIf="wordForm.get('word1').hasError('required') && wordForm.get('word1').touched">
+                            <strong>* required</strong>
+                         </div>
+
+                         <label for="word2">
+                             <input name="word2" formControlName="word2" class="input-field" placeholder="Enter word here"/>
+                         </label>
+                         <div class="error" *ngIf="wordForm.get('word2').hasError('required') && wordForm.get('word2').touched">
+                            <strong>* required</strong>
+                         </div>
+
+                         <label for="word1">
+                             <input name="word3" formControlName="word3" class="input-field" placeholder="Enter word here"/>
+                         </label>
+                         <div class="error" *ngIf="wordForm.get('word3').hasError('required') && wordForm.get('word3').touched">
+                            <strong>* required</strong>
+                         </div>
+
+                         <label for="word4">
+                             <input name="word4" formControlName="word4" class="input-field" placeholder="Enter word here"/>
+                         </label>
+                         <div class="error" *ngIf="wordForm.get('word4').hasError('required') && wordForm.get('word4').touched">
+                            <strong>* required</strong>
+                         </div>
+
+                         <label for="word1">
+                             <input name="word5" formControlName="word5" class="input-field" placeholder="Enter word here"/>
+                         </label>
+                         <div class="error" *ngIf="wordForm.get('word5').hasError('required') && wordForm.get('word5').touched">
+                            <strong>* required</strong>
+                         </div>
+
+                         <label for="word1">
+                             <input name="word6" formControlName="word6" class="input-field" placeholder="Enter word here"/>
+                         </label>
+                         <div class="error" *ngIf="wordForm.get('word6').hasError('required') && wordForm.get('word6').touched">
+                            <strong>* required</strong>
+                         </div>
+
+                         <label for="word1">
+                             <input name="word7" formControlName="word7" class="input-field" placeholder="Enter word here"/>
+                         </label>
+                         <div class="error" *ngIf="wordForm.get('word7').hasError('required') && wordForm.get('word7').touched">
+                            <strong>* required</strong>
+                         </div>
+
+                         <label for="word1">
+                             <input name="word8" formControlName="word8" class="input-field" placeholder="Enter word here"/>
+                         </label>
+                         <div class="error" *ngIf="wordForm.get('word8').hasError('required') && wordForm.get('word8').touched">
+                            <strong>* required</strong>
+                         </div>
+
+                         <label for="word1">
+                             <input name="word9" formControlName="word9" class="input-field" placeholder="Enter word here"/>
+                         </label>
+                         <div class="error" *ngIf="wordForm.get('word9').hasError('required') && wordForm.get('word9').touched">
+                            <strong>* required</strong>
+                         </div>
+
+                         <label for="word1">
+                             <input name="word10" formControlName="word10" class="input-field" placeholder="Enter word here"/>
+                         </label>
+                         <div class="error" *ngIf="wordForm.get('word10').hasError('required') && wordForm.get('word10').touched">
+                            <strong>* required</strong>
+                         </div>
+
+                        <br/>
+                        <span>User <span class="required">*</span></span>
+                           <md-select formControlName="userSelected">
+                              <md-option *ngFor="let user of users" [value]="user">
+                                  {{ user.userName }}
+                              </md-option>
+                           </md-select>
+                           <div class="error" *ngIf="wordForm.get('userSelected').hasError('required') && wordForm.get('userSelected').touched">
+                               <strong>* Please select a user</strong>
+                            </div>
+
+                            <p class="text-center">
+                              <button class="btn btn-success" type="submit" (click)="saveData()" [disabled]="!wordForm.valid"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Save</button>
+                            </p>
+                    </fieldset>
+                </form>
+            </div>
+        </div>    
+   </div>
+</div>       
+
+                    

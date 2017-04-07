@@ -3,6 +3,8 @@ import { Component } from '@angular/core';
 @Component({
     selector: 'videoPlayer',
     template: `
+        <h3>Some motivational videos</h3>
+
         <youtube-player 
             [videoId]="id" 
             (ready)="savePlayer($event)"

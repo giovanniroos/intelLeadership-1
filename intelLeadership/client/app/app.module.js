@@ -24,6 +24,7 @@ var egghunt_component_1 = require("./components/egghunt/egghunt.component");
 var feedback_component_1 = require("./components/feedback/feedback.component");
 var survey_component_1 = require("./components/survey/survey.component");
 var video_component_1 = require("./components/video/video.component");
+var wordsearch_component_1 = require("./components/wordsearch/wordsearch.component");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -53,7 +54,8 @@ AppModule = __decorate([
             egghunt_component_1.EggHuntComponent,
             feedback_component_1.FeedbackComponent,
             survey_component_1.SurveyComponent,
-            video_component_1.VideoComponent],
+            video_component_1.VideoComponent,
+            wordsearch_component_1.WordsearchComponent],
         providers: [app_routing_1.appRoutingProviders],
         bootstrap: [app_component_1.AppComponent]
     })

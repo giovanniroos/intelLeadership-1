@@ -18,6 +18,7 @@ import { EggHuntComponent } from './components/egghunt/egghunt.component';
 import { FeedbackComponent } from './components/feedback/feedback.component';
 import { SurveyComponent } from './components/survey/survey.component';
 import { VideoComponent } from './components/video/video.component';
+import { WordsearchComponent } from './components/wordsearch/wordsearch.component';
 
 @NgModule({
   imports:      [ BrowserModule, 
@@ -42,7 +43,8 @@ import { VideoComponent } from './components/video/video.component';
                   EggHuntComponent,
                   FeedbackComponent,
                   SurveyComponent,
-                  VideoComponent],
+                  VideoComponent,
+                  WordsearchComponent],
   providers:    [ appRoutingProviders],
   bootstrap:    [ AppComponent ]
 })

@@ -19,7 +19,7 @@ export class EggHuntComponent implements OnInit {
   cantSave: Boolean;
   cheating: Boolean;
   jasonLoggedIn: Boolean;
-  possibleBarCodes = [751,998,254,155,681,132,794,986,217,798,762,297,749,242,608,887,694,237,619,580,826,509,633,73,720,947,334,868,924,509,936,947,269,845,826,19,332,96,874];
+  possibleBarCodes = [751,998,254,155,681,132,794,986,217,798,762,297,749,242,608,887,694,237,619,580,826,509,633,73,720,202,334,868,924,101,936,947,269,845,826,19,332,96,874];
 
   constructor(private _userService: UserService, private fb: FormBuilder) {
       this.eggForm = this.fb.group({
